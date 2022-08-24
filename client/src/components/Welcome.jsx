@@ -1,6 +1,13 @@
 import React, { useContext } from "react";
 import { AiFillPlayCircle } from "react-icons/ai";
-import { SiEthereum, SiBitcoin, SiStripe, SiLitecoin, SiChainlink, SiDogecoin } from "react-icons/si";
+import {
+  SiEthereum,
+  SiBitcoin,
+  SiStripe,
+  SiLitecoin,
+  SiChainlink,
+  SiDogecoin,
+} from "react-icons/si";
 import { BsInfoCircle } from "react-icons/bs";
 
 import { TransactionContext } from "../context/TransactionContext";
@@ -21,14 +28,20 @@ const Input = ({ placeholder, name, type, value, handleChange }) => (
 );
 
 const Welcome = () => {
-  const { connectWallet, currentAccount, formData, sendTransaction, handleChange } = useContext(TransactionContext);
+  const {
+    connectWallet,
+    currentAccount,
+    formData,
+    sendTransaction,
+    handleChange,
+  } = useContext(TransactionContext);
 
   const handleSubmit = (e) => {
     const { addressTo, amount, keyword, message } = formData;
 
     e.preventDefault();
 
-    if(!addressTo || !amount || !keyword || !message) return;
+    if (!addressTo || !amount || !keyword || !message) return;
 
     sendTransaction();
   };
@@ -40,11 +53,15 @@ const Welcome = () => {
       <div className="flex lg:flex-row flex-col items-start justify-between lg:p-20 py-12 px-4">
         <div className="flex flex-1 justify-start items-start flex-col mf:mr-10">
           <h1 className="text-6xl sm:text-6xl text-white p-1 py-1 font-bold">
-            <span className=" bg-slate-800 leading-normal p-2"> Direct Carbon <br/> Capture Now </span>
+            <span className=" bg-slate-800 leading-normal p-2">
+              {" "}
+              Direct Carbon <br /> Capture Now{" "}
+            </span>
           </h1>
           <p className="text-left mt-5 text-slate-400 font-light md:w-9/12 w-11/12 text-base">
-            Explore the crypto world. Buy and <span className="text-sky-400"> sell </span> cryptocurrencies very <span className="text-sky-400"> very </span> very easily on
-            Clouds.
+            Explore the crypto world. Buy and{" "}
+            <span className="text-sky-400"> sell </span> cryptocurrencies very{" "}
+            <span className="text-sky-400"> very </span> very easily on Clouds.
           </p>
           {!currentAccount && (
             <button
@@ -53,24 +70,33 @@ const Welcome = () => {
               className="flex flex-row justify-center items-center my-5 bg-[#4ba3e3] p-3 rounded-md cursor-pointer hover:bg-slate-400"
             >
               <p className="text-white font-semibold text-sm">Connect Wallet</p>
-            </button> 
+            </button>
           )}
 
           <div className="grid sm:grid-cols-3 font-semibold grid-cols-2 w-full mt-10">
             <div className={`rounded-tl-2xl ${companyCommonStyles}`}>
-            <SiEthereum className="pr-2" fontSize={25} color="#96a3b7" /> Ethereum
-            </div>
-            <div className={companyCommonStyles}> <SiBitcoin className="pr-2" fontSize={25} color="#96a3b7" /> Bitcoin </div>
-            <div className={`sm:rounded-tr-2xl ${companyCommonStyles}`}>
-            <SiStripe className="pr-2" fontSize={20} color="#96a3b7" /> Stripe
-            </div>
-            <div className={`sm:rounded-bl-2xl ${companyCommonStyles}`}>
-            <SiChainlink className="pr-2" fontSize={25} color="#96a3b7" /> ChainLink
+              <SiEthereum className="pr-2" fontSize={25} color="#96a3b7" />{" "}
+              Ethereum
             </div>
             <div className={companyCommonStyles}>
-            <SiDogecoin className="pr-2" fontSize={25} color="#96a3b7" />Doge</div>
+              {" "}
+              <SiBitcoin className="pr-2" fontSize={25} color="#96a3b7" />{" "}
+              Bitcoin{" "}
+            </div>
+            <div className={`sm:rounded-tr-2xl ${companyCommonStyles}`}>
+              <SiStripe className="pr-2" fontSize={20} color="#96a3b7" /> Stripe
+            </div>
+            <div className={`sm:rounded-bl-2xl ${companyCommonStyles}`}>
+              <SiChainlink className="pr-2" fontSize={25} color="#96a3b7" />{" "}
+              ChainLink
+            </div>
+            <div className={companyCommonStyles}>
+              <SiDogecoin className="pr-2" fontSize={25} color="#96a3b7" />
+              Doge
+            </div>
             <div className={`rounded-br-2xl ${companyCommonStyles}`}>
-            <SiLitecoin className="pr-2" fontSize={25} color="#96a3b7" />Litecoin
+              <SiLitecoin className="pr-2" fontSize={25} color="#96a3b7" />
+              Litecoin
             </div>
           </div>
         </div>
@@ -82,10 +108,16 @@ const Welcome = () => {
                 <div className="w-10 h-10 rounded-full border border-white flex justify-center items-center">
                   <SiEthereum fontSize={21} color="#fff" />
                 </div>
-                <BsInfoCircle className="hover:cursor-pointer" fontSize={17} color="#fff" />
+                <BsInfoCircle
+                  className="hover:cursor-pointer"
+                  fontSize={17}
+                  color="#fff"
+                />
               </div>
               <div>
-                <p className="text-white font-extralight text-sm">0xasda...fda54</p>
+                <p className="text-white font-extralight text-sm">
+                  0xasda...fda54
+                </p>
                 <p className="text-white font-semibold text-lg mt-1">
                   via Ethereum
                 </p>
