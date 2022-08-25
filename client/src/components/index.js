@@ -1,6 +1,9 @@
-export { default as Loader } from './Loader'
-export { default as Footer } from './Footer'
-export { default as Navbar } from './Navbar'
-export { default as Services } from './Services'
-export { default as Transactions } from './Transactions'
-export { default as Welcome } from './Welcome'
+export { default as Loader } from "./Loader";
+export { default as Footer } from "./Footer";
+export { default as Navbar } from "./Navbar";
+export { default as Services } from "./Services";
+export { default as Transactions } from "./Transactions";
+export { default as Welcome } from "./Welcome";
+export { default as Welcome1 } from "./Welcome1";
+export { default as Welcome2 } from "./Welcome2";
+export { default as Welcome3 } from "./Welcome3";
